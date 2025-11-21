@@ -1,0 +1,23 @@
+### Test confirmation
+POST http://localhost:5000/api/callback
+Content-Type: application/json
+
+{
+  "type": "confirmation"
+}
+
+### Test message_new
+POST http://localhost:5000/api/callback
+Content-Type: application/json
+
+{
+  "type": "message_new",
+  "secret": "YOUR_SECRET_KEY",
+  "object": {
+    "message": {
+      "from_id": 123456789,
+      "peer_id": 123456789,
+      "text": "/start"
+    }
+  }
+}
